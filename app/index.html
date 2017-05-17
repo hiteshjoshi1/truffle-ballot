@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ballot DApp</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+</head>
+<body class="container">
+  <h1>Decentralized Ballot Application</h1>
+  <div class="table-responsive">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Proposal</th>
+          <th>Vote Count</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Proposal-0</td>
+          <td id="proposal-0"></td>
+        </tr>
+        <tr>
+          <td>Proposal-1</td>
+          <td id="proposal-1"></td>
+        </tr>
+        <tr>
+          <td>Proposal-2</td>
+          <td id="proposal-2"></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <h2>Vote here</h2>
+  <div>
+  <form onsubmit="voteForProposal()">
+  <!--<input type="number" id="proposal" placeholder="vote" /> -->
+  
+  <select class="selectBox" class="form-control"id="proposal">
+   <option selected disabled>Vote for Proposal</option>
+  <option value="proposal-0">Proposal-0</option>
+  <option value="proposal-1">Proposal-1</option>
+  <option value="proposal-2">Proposal-2</option>
+  </select>
+
+  <input type ="text" id ="votersaddress" placeholder="Voters Adress"/>
+  <input type ="password" id ="voterspassword" placeholder="Voters Password"/>
+   <input type="submit" class="btn btn-primary" id="vote"/>
+   </form>
+  </div>  
+      <div id="voteinit"></div>
+     <div id="voteCompleted"></div>
+  <br> <br>
+  
+  <h2>Give Voting right To</h2> 
+<div>  
+  <form onsubmit="giveVoteRights()">
+    <input type="text" id="chairmanAddress" placeholder="Chairman Address" />
+	<input type="password" id="chairmanPwd" placeholder = "Chairman Password"  />
+    <input type="text" id="voterAddress" placeholder = "Voters Address" />
+	<input type="submit" class="btn btn-primary" id="submit"/>
+  </form>
+    <div id="votemsg"></div>
+  </div>
+  
+
+  
+  <br> <br>
+  <h2>Check Winner</h2> 
+  <div>
+  <p>
+    <a href="#" onclick="winningProposal()" class="btn btn-primary">Check Winner</a>
+	</p>
+	  <div id="msg"></div>
+  </div>
+  
+    
+  
+</body>
+<script src="https://cdn.rawgit.com/ethereum/web3.js/develop/dist/web3.js"></script>
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+<script src="./app.js"></script>
+</html>
