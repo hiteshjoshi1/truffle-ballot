@@ -14,19 +14,25 @@ web.personal.unlockAccount(web3.eth.coinbase,'password',15000);
 
 Deploy the app using-
 truffle migrate
+
 2. Once the  Ballot.json is generated.  You can use 
 npm run dev 
+
 to start the App
+
 3. Hit the App with 
 http://localhost:8080
+
 4. Initially the vote count is zero
+
 5. Generate some accounts in geth/truffle console
 personal.newAccount();
 password : test
 <Address>
+
 6. Use your coinbase address as your Ballot Chairman Address, Coinbase Pwd as chairman password
-and address generated in Step 5 as Voter address. 
-Give Address the right to Voter
+and address generated in Step 5 as Voter address.Give Address the right to Voter
+
 7. Once the address has right to Vote in Blockchain, they can vote for one of the three proposals.
 Once they Vote and it becomes part of blockchain, Vote count is updated.
 
