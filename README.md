@@ -11,6 +11,7 @@ Steps:-
 1. Before truffle migrate unlock your coinbase
 >truffle console
 web.personal.unlockAccount(web3.eth.coinbase,'password',15000);
+
 Deploy the app using-
 truffle migrate
 2. Once the  Ballot.json is generated.  You can use 
